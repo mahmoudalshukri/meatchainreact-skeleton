@@ -2,7 +2,7 @@
   "name": "metachainreact-skeleton",
   "version": "1.0.0",
   "description": "A lightweight and customizable loading skeleton library for React components.  This library provides a collection of reusable loading skeleton components for displaying placeholders while content is being fetched or loaded from an external source. The loading skeletons mimic the structure and layout of the actual content, enhancing the user experience by giving visual feedback and reducing perceived loading times.  Features: - Easy-to-use loading skeleton components for text, images, and more. - Customizable color, background, animation type, and size. - Built-in support for popular CSS frameworks like Tailwind CSS. - Lightweight and optimized for performance.  Whether you are building a complex web application or a simple prototype, this library simplifies the process of adding loading skeletons to your React components. It promotes a seamless user experience and ensures a smooth transition between loading states and content display.  Get started today and enhance the perceived performance of your React applications with this loading skeleton library!",
-  "main": "index.jsx",
+  "main": "index.js",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
