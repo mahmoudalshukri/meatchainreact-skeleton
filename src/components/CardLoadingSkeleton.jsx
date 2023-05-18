@@ -60,7 +60,6 @@ const CardLoadingSkeleton = ({
 
   return (
     <div className={styles.card} style={cardStyle}>
-      {/* Image */}
       <DivLoadingSkeleton
         width={width}
         height={coverH}
@@ -71,7 +70,6 @@ const CardLoadingSkeleton = ({
         speedInS={speedInS}
       />
       <div className={styles.space}>
-        {/* Title */}
         <div className={styles.title}>
           <DivLoadingSkeleton
             width={titleW}
@@ -84,7 +82,6 @@ const CardLoadingSkeleton = ({
           />
         </div>
       </div>
-      {/* User */}
       <div className={`${styles.space} ${styles.user}`}>
         <DivLoadingSkeleton
           width={userImageH}
@@ -111,7 +108,6 @@ const CardLoadingSkeleton = ({
           ))}
         </div>
       </div>
-      {/* Price */}
       <div className={`${styles.space} ${styles.price}`}>
         <div className={styles.priceText}>
           <div className="icon">

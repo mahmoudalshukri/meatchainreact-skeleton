@@ -15,7 +15,7 @@ const VisitingScheduleLoadingSkeleton = ({
   lineW,
   rowsNumber,
   rowH,
-  bRadiusBottom
+  bRadiusBottom,
 }) => {
   const cardStyle = {
     width,
@@ -23,51 +23,40 @@ const VisitingScheduleLoadingSkeleton = ({
     background: theme === "dark" ? "#232330" : "#F9FBE7",
     borderRadius: bRadius,
   };
+
+  const renderDivLoadingSkeleton = () => {
+    return (
+      <DivLoadingSkeleton
+        width={lineW}
+        height={lineH}
+        fgColor={fgColor}
+        bgColor={bgColor}
+        typeOfAnimation={typeOfAnimation}
+        speedInS={speedInS}
+        bRadius={bRadius}
+      />
+    );
+  };
+
   return (
     <div className={styles.card} style={cardStyle}>
       <div className={styles.header}>
-        <DivLoadingSkeleton 
-            width={lineW}
-            height={lineH}
-            fgColor={fgColor}
-            bgColor={bgColor}
-            typeOfAnimation={typeOfAnimation}
-            speedInS={speedInS}
-            bRadius={bRadius}
-        />
-        <DivLoadingSkeleton 
-            width={lineW}
-            height={lineH}
-            fgColor={fgColor}
-            bgColor={bgColor}
-            typeOfAnimation={typeOfAnimation}
-            speedInS={speedInS}
-            bRadius={bRadius}
-        />
-        <DivLoadingSkeleton 
-            width={lineW}
-            height={lineH}
-            fgColor={fgColor}
-            bgColor={bgColor}
-            typeOfAnimation={typeOfAnimation}
-            speedInS={speedInS}
-            bRadius={bRadius}
-        />
+        {renderDivLoadingSkeleton()}
+        {renderDivLoadingSkeleton()}
+        {renderDivLoadingSkeleton()}
       </div>
-      <div className={styles.break}>
-
-      </div>
+      <div className={styles.break}></div>
       <div className={styles.data}>
-        <TableLoadingSkeleton 
-            width={width}
-            height={rowH}
-            rowsNumber={rowsNumber}
-            bgColor={bgColor}
-            fgColor={fgColor}
-            speedInS={speedInS}
-            typeOfAnimation={typeOfAnimation}
-            bRadius={bRadius}
-            bRadiusBottom={bRadiusBottom}
+        <TableLoadingSkeleton
+          width={width}
+          height={rowH}
+          rowsNumber={rowsNumber}
+          bgColor={bgColor}
+          fgColor={fgColor}
+          speedInS={speedInS}
+          typeOfAnimation={typeOfAnimation}
+          bRadius={bRadius}
+          bRadiusBottom={bRadiusBottom}
         />
       </div>
     </div>

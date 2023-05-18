@@ -23,55 +23,41 @@ const AdvisorsLoadingSkeleton = ({
     height,
   };
 
+  const renderDivLoadingSkeleton = (width, height) => {
+    return (
+      <DivLoadingSkeleton
+        width={width}
+        height={height}
+        bgColor={bgColor}
+        fgColor={fgColor}
+        speedInS={speedInS}
+        typeOfAnimation={typeOfAnimation}
+        bRadius={bRadius}
+      />
+    );
+  };
+
+  const renderDescriptionLines = () => {
+    return [...Array(3)].map((_, index) => (
+      <div className={`${styles.line} ${styles.mt75}`} key={index}>
+        {renderDivLoadingSkeleton(descriptionW, descriptionH)}
+      </div>
+    ));
+  };
+
   return (
     <div className={styles.advisor} style={cardStyle}>
       <div className={`${styles.image} ${styles.mt75}`}>
-        <DivLoadingSkeleton
-          height={imageH}
-          width={imageW}
-          bgColor={bgColor}
-          fgColor={fgColor}
-          speedInS={speedInS}
-          typeOfAnimation={typeOfAnimation}
-          bRadius={bRadius}
-        />
+        {renderDivLoadingSkeleton(imageW, imageH)}
       </div>
       <div className={`${styles.name} ${styles.mt75}`}>
-        <DivLoadingSkeleton
-          height={nameH}
-          width={nameW}
-          bgColor={bgColor}
-          fgColor={fgColor}
-          speedInS={speedInS}
-          typeOfAnimation={typeOfAnimation}
-          bRadius={bRadius}
-        />
+        {renderDivLoadingSkeleton(nameW, nameH)}
       </div>
       <div className={`${styles.position} ${styles.mt75}`}>
-        <DivLoadingSkeleton
-          height={positionH}
-          width={positionW}
-          bgColor={bgColor}
-          fgColor={fgColor}
-          speedInS={speedInS}
-          typeOfAnimation={typeOfAnimation}
-          bRadius={bRadius}
-        />
+        {renderDivLoadingSkeleton(positionW, positionH)}
       </div>
       <div className={`${styles.description} ${styles.mt75}`}>
-        {[...Array(3)].map((_, index) => (
-          <div className={`${styles.line} ${styles.mt75}`} key={index}>
-            <DivLoadingSkeleton
-              width={descriptionW}
-              height={descriptionH}
-              bgColor={bgColor}
-              fgColor={fgColor}
-              bRadius={bRadius}
-              typeOfAnimation={typeOfAnimation}
-              speedInS={speedInS}
-            />
-          </div>
-        ))}
+        {renderDescriptionLines()}
       </div>
     </div>
   );

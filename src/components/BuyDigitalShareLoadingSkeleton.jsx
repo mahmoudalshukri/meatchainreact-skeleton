@@ -28,153 +28,71 @@ const BuyDigitalShareLoadingSkeleton = ({
     borderRadius: bRadius,
   };
 
+  const renderLoadingSkeleton = (width, height) => {
+    return (
+      <DivLoadingSkeleton
+        width={width}
+        height={height}
+        bRadius={bRadius}
+        fgColor={fgColor}
+        bgColor={bgColor}
+        typeOfAnimation={typeOfAnimation}
+        speedInS={speedInS}
+      />
+    );
+  };
+
   return (
     <div className={styles.card} style={cardStyle}>
       <div className={styles.title}>
-        <DivLoadingSkeleton
-          width={titleW}
-          height={titleH}
-          bRadius={bRadius}
-          fgColor={fgColor}
-          bgColor={bgColor}
-          typeOfAnimation={typeOfAnimation}
-          speedInS={speedInS}
-        />
+        {renderLoadingSkeleton(titleW, titleH)}
       </div>
       <div className={styles.bnb}>
         <div className={styles.number}>
           <div className={styles.line}>
-            <DivLoadingSkeleton
-              width={lineW}
-              height={lineH}
-              bRadius={bRadius}
-              fgColor={fgColor}
-              bgColor={bgColor}
-              typeOfAnimation={typeOfAnimation}
-              speedInS={speedInS}
-            />
+            {renderLoadingSkeleton(lineW, lineH)}
           </div>
           <div className={styles.line}>
-            <DivLoadingSkeleton
-              width={lineW}
-              height={lineH}
-              bRadius={bRadius}
-              fgColor={fgColor}
-              bgColor={bgColor}
-              typeOfAnimation={typeOfAnimation}
-              speedInS={speedInS}
-            />
+            {renderLoadingSkeleton(lineW, lineH)}
           </div>
         </div>
         <div className={styles.address}>
-          <DivLoadingSkeleton
-            width={bnbAdressW}
-            height={bnbAdressH}
-            bRadius={bRadius}
-            fgColor={fgColor}
-            bgColor={bgColor}
-            typeOfAnimation={typeOfAnimation}
-            speedInS={speedInS}
-          />
+          {renderLoadingSkeleton(bnbAdressW, bnbAdressH)}
         </div>
       </div>
       <div className={styles.amountToBuy}>
         <div className={styles.number}>
           <div className={styles.line}>
-            <DivLoadingSkeleton
-              width={lineW}
-              height={lineH}
-              bRadius={bRadius}
-              fgColor={fgColor}
-              bgColor={bgColor}
-              typeOfAnimation={typeOfAnimation}
-              speedInS={speedInS}
-            />
+            {renderLoadingSkeleton(lineW, lineH)}
           </div>
           <div className={styles.line}>
-            <DivLoadingSkeleton
-              width={lineW}
-              height={lineH}
-              bRadius={bRadius}
-              fgColor={fgColor}
-              bgColor={bgColor}
-              typeOfAnimation={typeOfAnimation}
-              speedInS={speedInS}
-            />
+            {renderLoadingSkeleton(lineW, lineH)}
           </div>
         </div>
         <div className={styles.address}>
-          <DivLoadingSkeleton
-            width={maxBtnW}
-            height={maxBtnH}
-            bRadius={bRadius}
-            fgColor={fgColor}
-            bgColor={bgColor}
-            typeOfAnimation={typeOfAnimation}
-            speedInS={speedInS}
-          />
+          {renderLoadingSkeleton(maxBtnW, maxBtnH)}
         </div>
       </div>
       <div className={styles.data}>
         <div className={styles.price}>
           <div className={styles.line}>
-            <DivLoadingSkeleton
-              width={lineW}
-              height={lineH}
-              bRadius={bRadius}
-              fgColor={fgColor}
-              bgColor={bgColor}
-              typeOfAnimation={typeOfAnimation}
-              speedInS={speedInS}
-            />
+            {renderLoadingSkeleton(lineW, lineH)}
           </div>
           <div className={styles.line}>
-            <DivLoadingSkeleton
-              width={lineW}
-              height={lineH}
-              bRadius={bRadius}
-              fgColor={fgColor}
-              bgColor={bgColor}
-              typeOfAnimation={typeOfAnimation}
-              speedInS={speedInS}
-            />
+            {renderLoadingSkeleton(lineW, lineH)}
           </div>
         </div>
         <div className={styles.amount}>
           <div className={styles.line}>
-            <DivLoadingSkeleton
-              width={lineW}
-              height={lineH}
-              bRadius={bRadius}
-              fgColor={fgColor}
-              bgColor={bgColor}
-              typeOfAnimation={typeOfAnimation}
-              speedInS={speedInS}
-            />
+            {renderLoadingSkeleton(lineW, lineH)}
           </div>
           <div className={styles.line}>
-            <DivLoadingSkeleton
-              width={lineW}
-              height={lineH}
-              bRadius={bRadius}
-              fgColor={fgColor}
-              bgColor={bgColor}
-              typeOfAnimation={typeOfAnimation}
-              speedInS={speedInS}
-            />
+            {renderLoadingSkeleton(lineW, lineH)}
           </div>
         </div>
       </div>
       <div className={styles.submit}>
-        <DivLoadingSkeleton
-          width={submitW}
-          height={submitH}
-          bRadius={bRadius}
-          fgColor={fgColor}
-          bgColor={bgColor}
-          typeOfAnimation={typeOfAnimation}
-          speedInS={speedInS}
-        />
+        {renderLoadingSkeleton(submitW, submitH)}
       </div>
     </div>
   );
