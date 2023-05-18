@@ -1,0 +1,41 @@
+{
+  "name": "metachainreact-skeleton",
+  "version": "1.0.0",
+  "description": "A lightweight and customizable loading skeleton library for React components.  This library provides a collection of reusable loading skeleton components for displaying placeholders while content is being fetched or loaded from an external source. The loading skeletons mimic the structure and layout of the actual content, enhancing the user experience by giving visual feedback and reducing perceived loading times.  Features: - Easy-to-use loading skeleton components for text, images, and more. - Customizable color, background, animation type, and size. - Built-in support for popular CSS frameworks like Tailwind CSS. - Lightweight and optimized for performance.  Whether you are building a complex web application or a simple prototype, this library simplifies the process of adding loading skeletons to your React components. It promotes a seamless user experience and ensures a smooth transition between loading states and content display.  Get started today and enhance the perceived performance of your React applications with this loading skeleton library!",
+  "main": "index.jsx",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahmoudalshukri/ms-react-loading.git"
+  },
+  "keywords": [
+    "React",
+    "Loading",
+    "Skeleton",
+    "Placeholder"
+  ],
+  "author": "Mahmoud Alshukri",
+  "license": "ISC",
+    "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@material/react-button": "^0.15.0",
+    "prop-types": "^15.7.2",
+    "react": "^18.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/mahmoudalshukri/ms-react-loading/issues"
+  },
+  "homepage": "https://github.com/mahmoudalshukri/ms-react-loading#readme"
+}
